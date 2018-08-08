@@ -12,5 +12,5 @@ rand=$(shuf -i 1-$N -n 1)
 echo $rand > rand.txt
 a=$(awk "FNR==$rand" tmp3.txt )
 wget $a
-imname=$(ls | grep *.jpeg )
+imname=$(ls | grep *.jp* )
 /usr/bin/gsettings set org.gnome.desktop.background picture-uri file:///$(pwd)/$imname
